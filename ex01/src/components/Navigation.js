@@ -1,20 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 const Navigation = () => (
   <nav>
-    <ul>
+    <ul className="list">
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/" exact activeClassName="active">
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <NavLink to="/about" activeClassName="active">
+          About
+        </NavLink>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/contact" activeClassName="active">
+          Contact
+        </NavLink>
       </li>
       <li>
-        <Link to="/profile">Profile</Link>
+        <NavLink to="/profile" activeClassName="active">
+          Profile
+        </NavLink>
       </li>
     </ul>
   </nav>
